@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <p>¿{{textoPregunta[index]}}?</p>
+    </div>
+    <div>
+        <div>
+            <ul>
+                <li *ngFor="let item of respuestas[index]">
+                <input type="radio" value={{item.respuesta.idRespuesta}} id={{item.respuesta.txtRespuesta}} name="opciones" (change)="eleccionRespuesta(item.respuesta.idRespuesta)">
+                    {{item.respuesta.txtRespuesta}}
+                </li>
+            </ul>
+
+        </div>
+    
+    </div>
+    <button (click)="anterior()">Ant</button>
+    <button (click)="siguiente()">Sig</button>
+</div>
